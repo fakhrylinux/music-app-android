@@ -3,6 +3,7 @@ package me.fakhry.musicapp.views.login
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import me.fakhry.musicapp.databinding.ActivityLoginBinding
 import me.fakhry.musicapp.views.forgotpassword.ForgotPasswordActivity
 import me.fakhry.musicapp.views.main.MainActivity
@@ -12,6 +13,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var loginBinding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         super.onCreate(savedInstanceState)
         loginBinding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(loginBinding.root)
