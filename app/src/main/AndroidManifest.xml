@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="me.fakhry.musicapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MusicApp">
+        <activity
+            android:name=".views.forgotpassword.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.changepassword.ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.playsong.PlaySongActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PrimaryLight" />
+        <activity
+            android:name=".views.detailalbum.DetailAlbumActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PrimaryLight" />
+        <activity
+            android:name=".views.edituser.EditUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.main.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.register.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.splash.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
