@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-parcelize'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -58,10 +59,10 @@ dependencies {
     //Gson
     implementation 'com.google.code.gson:gson:2.9.0'
 
-    //Firebase Database
+//    //Firebase Database
     implementation 'com.google.firebase:firebase-database:20.0.3'
 
-    //Firebase Storage
+//    //Firebase Storage
     implementation 'com.google.firebase:firebase-storage:20.0.0'
 
     //Firebase Auth
@@ -69,4 +70,7 @@ dependencies {
 
     //Hawk
     implementation 'com.orhanobut:hawk:2.0.1'
+
+    //Anko
+    implementation 'org.jetbrains.anko:anko-commons:0.10.8'
 }

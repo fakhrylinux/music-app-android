@@ -7,14 +7,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.google.firebase.auth.FirebaseAuth
 import me.fakhry.musicapp.databinding.FragmentUserBinding
 import me.fakhry.musicapp.views.changepassword.ChangePasswordActivity
 import me.fakhry.musicapp.views.edituser.EditUserActivity
+import me.fakhry.musicapp.views.login.LoginActivity
 import me.fakhry.musicapp.views.main.MainActivity
+import org.jetbrains.anko.startActivity
 
 class UserFragment : Fragment() {
     private var _binding: FragmentUserBinding? = null
     private val userBinding get() = _binding
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,6 +32,8 @@ class UserFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Init
+        auth = FirebaseAuth.getInstance()
         onClick()
     }
 
@@ -45,7 +51,9 @@ class UserFragment : Fragment() {
         }
 
         userBinding?.btnLogout?.setOnClickListener {
-            (activity as MainActivity).finish()
+            auth.signOut()
+            context?.startActivity<LoginActivity>()
+            (activity as MainActivity).finishAffinity()
         }
     }
 }

@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/BGauth_bot.xml" value="0.1935" />
         <entry key="app/src/main/res/drawable/bg_auth_bot.xml" value="0.2875" />
         <entry key="app/src/main/res/drawable/bg_auth_top.xml" value="0.2875" />
         <entry key="app/src/main/res/drawable/bg_btn_auth.xml" value="0.308" />
@@ -27,6 +28,7 @@
         <entry key="app/src/main/res/layout/fragment_user.xml" value="0.35104166666666664" />
         <entry key="app/src/main/res/layout/item_album.xml" value="0.35104166666666664" />
         <entry key="app/src/main/res/layout/item_song.xml" value="0.35104166666666664" />
+        <entry key="app/src/main/res/menu/main_menu.xml" value="0.35104166666666664" />
         <entry key="app/src/main/res/menu/main_meu.xml" value="0.35104166666666664" />
       </map>
     </option>

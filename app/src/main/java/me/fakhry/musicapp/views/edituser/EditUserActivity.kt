@@ -6,30 +6,30 @@ import androidx.appcompat.app.AppCompatActivity
 import me.fakhry.musicapp.databinding.ActivityEditUserBinding
 
 class EditUserActivity : AppCompatActivity() {
-    private lateinit var editUserBinding: ActivityEditUserBinding
+    private lateinit var bd: ActivityEditUserBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        editUserBinding = ActivityEditUserBinding.inflate(layoutInflater)
-        setContentView(editUserBinding.root)
+        bd = ActivityEditUserBinding.inflate(layoutInflater)
+        setContentView(bd.root)
 
         init()
         onClick()
     }
 
     private fun onClick() {
-        editUserBinding.btnUpdate.setOnClickListener {
+        bd.btnUpdate.setOnClickListener {
             Toast.makeText(this, "Berhasil diupdate", Toast.LENGTH_SHORT).show()
         }
 
-        editUserBinding.tbEditUser.setNavigationOnClickListener {
+        bd.tbEditUser.setNavigationOnClickListener {
             finish()
         }
     }
 
     private fun init() {
         //Set Support ActionBar
-        setSupportActionBar(editUserBinding.tbEditUser)
+        setSupportActionBar(bd.tbEditUser)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = null
     }

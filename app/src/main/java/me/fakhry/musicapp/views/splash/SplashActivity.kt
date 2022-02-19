@@ -6,6 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import me.fakhry.musicapp.databinding.ActivitySplashBinding
+import me.fakhry.musicapp.repository.Repository
 import me.fakhry.musicapp.views.login.LoginActivity
 
 class SplashActivity : AppCompatActivity() {
@@ -17,6 +18,7 @@ class SplashActivity : AppCompatActivity() {
         splashBd = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(splashBd.root)
 
+        Repository.addDataToTopAlbumsimage()
         delayAndToLogin()
     }
 

@@ -11,19 +11,19 @@ import me.fakhry.musicapp.views.topcharts.TopChartsFragment
 import me.fakhry.musicapp.views.user.UserFragment
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var mainBinding: ActivityMainBinding
+    private lateinit var bd: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mainBinding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(mainBinding.root)
+        bd = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(bd.root)
 
         init()
     }
 
     override fun onBackPressed() {
         super.onBackPressed()
-        val selectedItemId = mainBinding.btmNavigationMain.getSelectedItemId()
+        val selectedItemId = bd.btmNavigationMain.getSelectedItemId()
         if (selectedItemId == R.id.action_top_charts) {
             finishAffinity()
         } else {
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun init() {
         // Setup BottomNavigation Bar
-        mainBinding.btmNavigationMain.setOnItemSelectedListener { id ->
+        bd.btmNavigationMain.setOnItemSelectedListener { id ->
             when (id) {
                 R.id.action_top_charts -> openFragment(TopChartsFragment())
                 R.id.action_my_tracks -> openFragment(MyTracksFragment())
@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openHomeFragment() {
-        mainBinding.btmNavigationMain.setItemSelected(R.id.action_top_charts)
+        bd.btmNavigationMain.setItemSelected(R.id.action_top_charts)
     }
 
     private fun openFragment(fragment: Fragment) {
